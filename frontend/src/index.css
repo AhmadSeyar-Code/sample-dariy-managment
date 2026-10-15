@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Tahoma', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background-color: #f5f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f7f5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-[0_4px_18px_-12px_rgba(15,23,42,0.18)];
+  }
+
+  .panel-heading {
+    @apply flex items-center gap-2 text-base font-bold text-slate-900 sm:text-lg;
+  }
+
+  .field-control {
+    @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-right text-sm text-slate-800 outline-none transition placeholder:text-slate-400 hover:border-slate-300 focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white shadow-sm shadow-emerald-900/10 transition hover:-translate-y-0.5 hover:bg-emerald-800 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-500/20 disabled:pointer-events-none disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-200;
+  }
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+html.dark {
+  color-scheme: dark;
+  color: #e2e8f0;
+  background-color: #0b1220;
+}
+
+html.dark body {
+  background: #0b1220;
+}
+
+html.dark [class*="bg-[#f"] {
+  background-color: #0b1220 !important;
+}
+
+html.dark [class~="bg-white"],
+html.dark [class*="bg-white/"] {
+  background-color: #111c2e !important;
+}
+
+html.dark [class*="bg-slate-50"] {
+  background-color: #162235 !important;
+}
+
+html.dark [class*="bg-slate-100"] {
+  background-color: #0f1929 !important;
+}
+
+html.dark [class*="text-slate-900"] {
+  color: #f1f5f9 !important;
+}
+
+html.dark [class*="text-slate-800"] {
+  color: #e2e8f0 !important;
+}
+
+html.dark [class*="text-slate-700"] {
+  color: #cbd5e1 !important;
+}
+
+html.dark [class*="text-slate-600"] {
+  color: #b6c3d3 !important;
+}
+
+html.dark [class*="text-slate-500"] {
+  color: #94a3b8 !important;
+}
+
+html.dark [class*="text-slate-400"] {
+  color: #8293a8 !important;
+}
+
+html.dark [class*="border-slate-"] {
+  border-color: #334155 !important;
+}
+
+html.dark [class*="bg-emerald-50"] {
+  background-color: #12362f !important;
+}
+
+html.dark [class*="bg-emerald-100"] {
+  background-color: #174438 !important;
+}
+
+html.dark [class*="text-emerald-900"] {
+  color: #c6f6df !important;
+}
+
+html.dark [class*="text-emerald-800"] {
+  color: #a7f3d0 !important;
+}
+
+html.dark [class*="text-emerald-700"] {
+  color: #6ee7b7 !important;
+}
+
+html.dark [class*="border-emerald-"] {
+  border-color: #245b49 !important;
+}
+
+html.dark [class*="bg-blue-50"] {
+  background-color: #142e4b !important;
+}
+
+html.dark [class*="text-blue-700"] {
+  color: #93c5fd !important;
+}
+
+html.dark [class*="bg-orange-50"],
+html.dark [class*="bg-amber-50"] {
+  background-color: #3a2b18 !important;
+}
+
+html.dark [class*="text-orange-700"],
+html.dark [class*="text-amber-900"] {
+  color: #fcd38d !important;
+}
+
+html.dark [class*="border-amber-"] {
+  border-color: #654d2b !important;
+}
+
+html.dark [class*="bg-red-50"] {
+  background-color: #3b2027 !important;
+}
+
+html.dark [class*="text-red-700"] {
+  color: #fda4af !important;
+}
+
+html.dark [class*="text-red-800"] {
+  color: #fecdd3 !important;
+}
+
+html.dark [class*="border-red-"] {
+  border-color: #6b303a !important;
+}
+
+html.dark [class~="field-control"],
+html.dark input,
+html.dark textarea,
+html.dark select {
+  color: #e2e8f0;
+}
+
+html.dark .field-control:focus,
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  background-color: #111c2e !important;
+}
+
+html.dark .field-control {
+  background-color: #162235 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #8293a8;
+}
+
+html.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+}
+
+html.dark .panel {
+  border-color: #29384d;
+  background-color: #111c2e;
+  box-shadow: 0 8px 24px -18px rgba(0, 0, 0, 0.7);
+}
+
+html.dark .btn-secondary {
+  border-color: #334155;
+  background-color: #162235;
+  color: #cbd5e1;
+}
+
+html.dark .btn-secondary:hover {
+  background-color: #1e2c40;
+}
+
+html.dark [class*="from-emerald-50"] {
+  --tw-gradient-from: #12362f var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(18 54 47 / 0) var(--tw-gradient-to-position);
+}
+
+html.dark [class*="to-teal-50"] {
+  --tw-gradient-to: #102c32 var(--tw-gradient-to-position);
+}
+
+html.dark table tbody tr:hover {
+  background-color: #19263a;
+}

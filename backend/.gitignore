@@ -1,0 +1,7 @@
+node_modules/
+.env
+uploads/logos/*
+uploads/products/*
+!uploads/logos/.gitkeep
+!uploads/products/.gitkeep
+!uploads/logos/default-dairy-logo.svg
